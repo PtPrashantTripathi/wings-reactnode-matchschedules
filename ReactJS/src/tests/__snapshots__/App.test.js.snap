@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders app component 1`] = `
+<div
+  className="app"
+>
+  <div
+    className="app-body"
+  >
+    <h2
+      className="app-title"
+    >
+      match schedule
+    </h2>
+    <div
+      className="list"
+    />
+    <div
+      className="footer-controls"
+    >
+      <button
+        className="success"
+        onClick={[Function]}
+      >
+        Add
+      </button>
+    </div>
+  </div>
+</div>
+`;
