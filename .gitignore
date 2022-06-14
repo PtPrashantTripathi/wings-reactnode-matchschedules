@@ -2,13 +2,15 @@
 ##########
 # Ignore all directories called node_modules in current folder and any subfolders.
 node_modules
-ReactJS/node_modules/
-NodeJS/node_modules/
-**node_modules
+ReactJS/node_modules/*
+NodeJS/node_modules/*
+ReactJS/node_modules
+NodeJS/node_modules
+**/node_modules/**.*
 ReactJS/test-report.xml
 NodeJS/test-report.xml
 .vscode
-
+./NodeJS/src/db/index.js
 # Packages #
 ############
 *.7z
@@ -39,3 +41,4 @@ Thumbs.db
 
 # Visual Studio Project Files #
 .vs/
+NodeJS/src/db/index.js
