@@ -8,7 +8,8 @@
   },
   "scripts": {
     "start": "node_modules/.bin/pm2 -f start src/index.js --watch",
-    "start:dev": "node src/index.js",
+    "close": "sh -c 'lsof -i :${PORT:-8001} -t | xargs kill'",
+    "start:dev": "npx kill-port 8001 && node src/index.js",
     "test": "jest",
     "stop": "node_modules/.bin/pm2 kill"
   },
