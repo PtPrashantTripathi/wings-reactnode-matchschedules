@@ -19,7 +19,7 @@ router.get("/fixtures", (req, res) => {
   if (req.query.venue) {
     query.venue = req.query.venue;
   }
-  Fixture.find(query, { _id: 0 }, (err, data) => {
+  Fixture.find(query, null, (err, data) => {
     if (!data) {
       res.status(400).json({ error: "Data not found" });
     } else {
