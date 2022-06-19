@@ -1,4 +1,4 @@
-import model from '../model';
+import model from "../model";
 import Button from "./Button";
 import Error from "./Error";
 
@@ -21,6 +21,7 @@ const Form = ({ title, inputOnChangeHandler, onSaveHandler, error }) => (
           <input
             type={i.input_type}
             name={i.column_name}
+            onChange={inputOnChangeHandler}
           />
         </div>
       )}

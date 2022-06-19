@@ -1,5 +1,3 @@
-import Button from "./Button";
-
 // Card component renders each record in "data.records" from the api
 // consists of table, thead, tbody elements along with tr, th, td
 // props:
