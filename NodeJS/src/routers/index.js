@@ -8,13 +8,18 @@ const router = new express.Router();
 // You should also implement below filters
 //   * filter to list matches that will be held between given start and end date
 //   * filter for venue
-router.get("/fixtures", async (req, res) => {
+router.get("/fixtures", (req, res) => {
     let query = {};
-    if (req.query.start_date) {
-        query.date = { $gte: req.query.start_date };
+    if (req.query.end_date && req.query.start_date) {
+        query.date = { $gte: req.query.start_date, $lte: req.query.end_date };
     }
-    if (req.query.end_date) {
-        query.date = { $lte: req.query.end_date };
+    else{
+        if (req.query.start_date) {
+            query.date = { $gte: req.query.start_date };
+        }
+        if (req.query.end_date) {
+            query.date = { $lte: req.query.end_date };
+        }
     }
     if (req.query.venue) {
         query.venue = req.query.venue;
@@ -34,7 +39,7 @@ router.get("/fixtures", async (req, res) => {
 //   * team2
 //   * venue
 //   * date
-router.post("/fixtures", async (req, res) => {
+router.post("/fixtures", (req, res) => {
     const fixture = new Fixture({
         team1: req.body.team1,
         team2: req.body.team2,
