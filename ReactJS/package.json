@@ -3,15 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "jest-junit-reporter": "^1.1.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "5.0.1",
-    "react-test-renderer": "17.0.2",
-    "web-vitals": "^1.0.1",
-    "xml-js": "^1.6.11",
-    "xml2js": "^0.4.23"
+    "@testing-library/jest-dom": "*",
+    "jest-junit-reporter": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-scripts": "*",
+    "react-test-renderer": "*",
+    "web-vitals": "*",
+    "xml-js": "*",
+    "xml2js": "*"
   },
   "scripts": {
     "start": "react-scripts start",
